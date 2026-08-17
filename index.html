@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Daily Planner</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>✨ Smart Daily Planner</h1>
+
+        <div id="date"></div>
+
+        <h2>Today's Progress</h2>
+
+        <div class="progress-box">
+            <div id="progressBar"></div>
+        </div>
+
+        <p id="progressText">0% Completed</p>
+
+        <div class="task-input">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What do you need to do?"
+            >
+
+            <select id="priority">
+                <option value="High">🔴 High</option>
+                <option value="Medium">🟡 Medium</option>
+                <option value="Low">🟢 Low</option>
+            </select>
+
+            <button onclick="addTask()">+ Add Task</button>
+
+        </div>
+
+        <div class="filters">
+
+            <button onclick="filterTasks('all')">All</button>
+
+            <button onclick="filterTasks('pending')">
+                Pending
+            </button>
+
+            <button onclick="filterTasks('completed')">
+                Completed
+            </button>
+
+        </div>
+
+        <div id="taskList"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
